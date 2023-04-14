@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>{{> page/title}}</title>
+    <link rel="stylesheet" href="/src/public/css/app.css">
+</head>
+<body>
+    <div class="app">
+{{> header}} {{!-- nạp partial từ file header and footer.hbs bên ngoài vào, cú pháp của handlebars, cho code nó gọn --}}
+<div class="container">
+        {{{body}}} {{!-- body này sẽ thay đổi theo nội dung mà mình render bên file home.handlebars, còn đi đâu mình cũng đều có header và footer --}}
+</div>
+{{> header}}
+
+    </div>
+</body>
+</html>

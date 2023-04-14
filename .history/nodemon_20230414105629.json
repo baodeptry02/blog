@@ -1,0 +1,4 @@
+{
+    "ext" : "js json scss hbs",
+    "_comment" : "tạo file json mới config lại cái extension cho nó lắng nghe cả thằng scss và hbs mỗi lần ctrl S lại luôn"
+}

@@ -1,0 +1,7 @@
+@charset "UTF-8";
+.test {
+  color: green;
+  /* tạo file _variable.scss rồi qua đó đặt tên biến, vô đây import thì có thể dùng đc */ }
+
+.header {
+  color: blue; }

@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>{{> page/title}}</title>
+</head>
+<body>
+    <div class="app">
+{{> header}}
+<div class="container">
+        {{{body}}} {{!-- body này sẽ thay đổi theo nội dung mà mình render bên file home.handlebars, còn đi đâu mình cũng đều có header và footer --}}
+</div>
+
+    </div>
+</body>
+</html>

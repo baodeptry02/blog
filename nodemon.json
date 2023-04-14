@@ -1,0 +1,4 @@
+{
+    "ext" : "js json",
+    "_comment" : "tạo file json mới config lại cái extension cho nó lắng nghe những file nào thay đổi nó tự động reset lên web"
+}
