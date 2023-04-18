@@ -6,7 +6,6 @@ const path = require('path');
 
 const app = express();
 const port = 3000;
-const route = require('./routes') /* file index js khi gõ thư mục là nó sẽ tự nhập file index nên không cần /index */
 
 const bodyParser = require('body-parser')
 
@@ -24,9 +23,27 @@ app.engine('.hbs', engine({extname: '.hbs'})); //đổi tên đuôi file .handle
 app.set('view engine', '.hbs');
 app.set('views', path.join(__dirname, 'resources/views'));
 
-/* đi cấu hình lại bên file khác để nó cho gọn hơn */
-route(app)
+app.get('/', (req, res) => {
+    res.render('home');
+})
 
+app.get('/news', (req, res) => {
+    res.render('news');
+})
+
+app.get('/search', (req, res) => {
+res.render('search');
+console.log(req.query); /* thì cái query này trả về là 1 object nên muốn truy cập vào object để lấy value thì . thêm 1 cái nữa vào key */
+/* thằng query parameters này thường sử dụng với get method nhất */
+console.log(req.query.q);
+})
+
+app.post("/search", function(req, res) {
+    /* post method là gửi dữ liệu ngầm và nó sẽ ko xuất hiện trên URL giống như query parameters của get method */
+    res.render('news');
+    console.log(req.body.gender) /* thằng query parameters đã tích hợp sẵn middleware rồi nên chỉ cần req.query là sẽ lấy đc dữ liệu nhưng mà mấy thằng khác thì chưa nên phải apply body parser vào mới lấy được */
+
+})
 
 app.listen(port, () => {
     console.log(`listening on ${port}`)

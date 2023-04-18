@@ -6,7 +6,7 @@ const path = require('path');
 
 const app = express();
 const port = 3000;
-const route = require('./routes') /* file index js khi gõ thư mục là nó sẽ tự nhập file index nên không cần /index */
+const route = require('./routes/index') /* file index js khi gõ thư mục là nó sẽ tự nhập file index nên không cần /index */
 
 const bodyParser = require('body-parser')
 

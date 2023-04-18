@@ -6,7 +6,7 @@ const path = require('path');
 
 const app = express();
 const port = 3000;
-const route = require('./routes') /* file index js khi gõ thư mục là nó sẽ tự nhập file index nên không cần /index */
+const route = require('./routes/index') /* file index js khi gõ thư mục là nó sẽ tự nhập file index nên không cần /index */
 
 const bodyParser = require('body-parser')
 
@@ -24,7 +24,7 @@ app.engine('.hbs', engine({extname: '.hbs'})); //đổi tên đuôi file .handle
 app.set('view engine', '.hbs');
 app.set('views', path.join(__dirname, 'resources/views'));
 
-/* đi cấu hình lại bên file khác để nó cho gọn hơn */
+
 route(app)
 
 

@@ -1,0 +1,20 @@
+<div class="mt-4">
+
+    <form method="post" action=""> {{!-- attribute action thể hiện chúng ta submit nó ở đâu với địa chỉ nào (thì ở đây là /news, là sau khi bấm submit nó sẽ di chuyển qua trang localhost:3000/news), method là submit với phương thức nào --}}
+        <div class="mb-3">
+            <label for="search-input" class="form-label">Từ khóa</label>
+            <input type="text" name="q" class="form-control" id="search-input" placeholder="Nhập từ khóa..."> {{!-- thẻ input cần phải có attribute name = q trên thanh URL nó sẽ hiển thị là (?q=f8) để thực hiện hành vi submit và đồng thời nó sẽ request và đính thêm 1 cái query parameters mà chúng ta đã nhập ở ô tìm kiếm vào --}}
+            {{!-- cứ thẻ input nào có name là nó sẽ lấy value của name đó nó sẽ truyển lên URL dưới dạng query parameters --}}
+        </div>
+        <button type="submit" class="btn btn-primary">Tìm kiếm</button>
+
+        <div class="mb-3">
+            <label for="search-input" class="form-label">Giới tính</label>
+            <select  name="gender" class="form-control" id="gender-input">
+                <option value="">-- Chọn giới tính --</option>
+                <option value="male">Nam</option>
+                <option value="female">Nữ</option>
+            </select>
+        </div>
+    </form>
+</div>

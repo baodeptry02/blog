@@ -1,0 +1,18 @@
+@import 'variable';
+
+.test {
+    color: $red-color; /* tạo file _variable.scss rồi qua đó đặt tên biến, vô đây import thì có thể dùng đc */
+}
+.header {
+    color: pink;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url('path/to/arrow-icon.svg');
+    background-repeat: no-repeat;
+    background-position: right center;
+    padding-right: 20px;
+  }
